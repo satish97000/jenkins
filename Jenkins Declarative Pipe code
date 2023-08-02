@@ -12,7 +12,13 @@ pipeline{
         }
         stage("Maven Build"){
             steps{
-                sh "mvn clean package"
+                sh " mvn clean "
+                sh " mvn vaidate "
+                sh " mvn compile "
+                sh " mvn test "
+                sh " mvn package " 
+                sh "  mvn verify "
+                sh " mvn install "
                 sh "mv target/*.war target/myweb.war"
             }
         }
