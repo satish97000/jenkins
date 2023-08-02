@@ -12,7 +12,6 @@ pipeline{
         }
         stage("Maven Build"){
             steps{
-                sh " mvn clean "
                 sh " mvn vaidate "
                 sh " mvn compile "
                 sh " mvn test "
